@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>I'm Luis.</title>
+		<meta name="author" content="Luis Rebatta" />
+		<meta name="description" content="Luis Rebatta" />
+
+		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="styles/main.css" />
+		<link rel="stylesheet" type="text/css" href="styles/photocontainer.css" />
+		<link rel="stylesheet" type="text/css" href="styles/timeline.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+		<script>
+			function showPerformanceAward() {
+				document.getElementById('modal-title-contents').innerHTML = 'IBM Prize for Best Performance & IBM Prize for Excellent Placement Year Performance';
+				document.getElementById('modal-body-img').src = "images/education/bestoverall.jpg";
+				document.getElementById('modal-body-contents').innerHTML =
+				'I was awarded the best performance prize for graduating at the top of my class and maintaining the highest mark in my degree each year. I was further awarded for excellent placement performance and significant workplace contributions.';
+			}
+
+			function showPlacementAward() {
+				document.getElementById('modal-title-contents').innerHTML = 'Best Placement Student of the Year for the Faculty of Engineering and Physical Science';
+				document.getElementById('modal-body-img').src = "images/education/placementaward.jpg";
+				document.getElementById('modal-body-contents').innerHTML =
+				'I significantly contributed to the work of my employer, the enhancement of other students development and experiences, and in building partnerships between Surrey University and industry.';
+			}
+		</script>
+	</head>
+	<body>
+		<style>
+		body {
+		  font-size: calc(1em + .3vw);
+		  font-family: 'Roboto', sans-serif;
+		  color: #1d2124;
+		  height: 100%;
+			overflow-x: hidden;
+			padding-right: 0px !important;
+		}
+
+		h2, h4, .centeredTitle {
+			text-align: center;
+			padding-top: 10px;
+			padding-bottom: 5px;
+			font-weight: bold;
+			letter-spacing: 0.2em;
+			font-family: 'Josefin Sans', sans-serif;
+			text-transform: uppercase;
+		}
+
+		.row {
+			margin-left: 0px;
+			margin-right: 0px;
+		}
+
+		.centeredTitle {
+			font-size: 2em;
+		}
+
+		.centeredSubTitle {
+			font-size: 1.5em;
+			padding-bottom: 0px;
+			text-align: center;
+			text-transform: none;
+		}
+
+		.container-fluid {
+			padding-top: 3%;
+			padding-bottom: 3%;
+			padding-left: calc(5% + 4vw);
+			padding-right: calc(5% + 4vw);
+			height: 100%;
+			margin-left: 0px;
+			margin-right: 0px;
+			overflow: hidden;
+		}
+
+		.vertical-container-fluid {
+			padding-top: 3%;
+			padding-bottom: 3%;
+			height: 100%;
+		}
+
+		.vertical-subcontainer-fluid {
+			padding-top: 1.5%;
+			padding-bottom: 1.5%;
+			height: 100%;
+		}
+
+		.image-content-header {
+			font-size: .75em;
+			font-weight: bold;
+			text-align: center;
+			letter-spacing: 0.2em;
+			font-family: 'Josefin Sans', sans-serif;
+			text-transform: uppercase;
+			margin-top: 3%;
+		}
+
+		.image-content-body {
+			font-size: .65em;
+			letter-spacing: 0.2em;
+			text-align: center;
+			font-family: 'Josefin Sans', sans-serif;
+			margin-top: 2%;
+		}
+
+		.speakingitem {
+			margin: 0% 1% 0% 1%;
+		}
+
+		.externalLinkButton {
+			background-color: black;
+			border-color: black;
+			margin-top: 1%;
+		}
+
+		.externalLinkButton:hover{
+			background-color: #f26f77;
+			border-color: #f26f77;
+		}
+
+		.externalLinkColorButton
+		{
+			background-color: #f26f77;
+			border-color: #f26f77;
+			margin: 1% 0 2% 0;
+		}
+
+		.externalLinkColorButton:hover{
+			background-color: black;
+			border-color: black;
+		}
+
+		a {
+			text-decoration: none;
+			font-weight: bold;
+			color: #1d2124;
+		}
+
+		a:hover {
+			color: #1d2124;
+			text-decoration: underline;
+		}
+
+		.modal{
+			padding-right: 0px !important;
+		}
+
+		.modal-content {
+			background-color: #1d2124;
+			color: white;
+			text-align: center;
+		}
+
+		.modal-content h4{
+			font-size: 1em;
+		}
+
+		.modal-content a:hover{
+			color: red;
+		}
+
+		#modal-body-contents {
+			margin: 5% 3% 0 3%;
+		}
+
+		#modal-content button {
+			float: right;
+		}
+
+		.modal-content img {
+			box-shadow: 0px 4px 10px 0px #171a1c;
+		}
+
+		.modal-dialog-centered {
+		  display:-webkit-box;
+		  display:-ms-flexbox;
+		  display:flex;
+		  -webkit-box-align:center;
+		  -ms-flex-align:center;
+		  align-items:center;
+		  min-height:calc(100% - (.5rem * 2));
+		}
+
+		@media (min-width: 576px) {
+		  .modal-dialog-centered {
+			min-height:calc(100% - (1.75rem * 2));
+		  }
+
+			.vertical-center-container
+			{
+				display: flex;
+				align-items: center; /* center vertical */
+			}
+		}
+
+		@media (min-width: 960px) {
+			}
+
+			.lg-vertical-center-container
+			{
+				display: flex;
+				align-items: center; /* center vertical */
+			}
+		}
+
+		</style>
+
+		<!-- Modal -->
+		<div id="imgModal" class="modal fade" role="dialog">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title centeredTitle" id="modal-title-contents"></h4>
+					</div>
+					<div class="modal-body">
+						<img class="rounded img-fluid" id="modal-body-img" src="" alt="Modal Image">
+						<p id="modal-body-contents"></p>
+						<button type="button" class="close" style="color: white" data-dismiss="modal">&times;</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Nav Button -->
+		<div id="navbutton" >
+			<span class="fa-stack">
+				<a class="btn fa fa-circle fa-stack-1x" href="#home"></a>
+				<a class="btn fa fa-chevron-circle-up fa-3x fa-stack-1x" href="#home"></a>
+			</span>
+		</div>
+
+		<!-- Core Content -->
+		<section class="section container-fluid" id="home">
+				<div class="row">
+					<div class="col-sm-6 vertical-center-container container-buffer">
+						<img class="w-75" id="selfportait" src="images/title/profile.jpg" alt="profile">
+					</div>
+					<div class="col-sm-6 vertical-center-container container-buffer" id="about">
+						<div class="vertical-center-text">
+							<h2 class="centeredTitle" >Hello World, I'm Luis!!!</h2>
+							<br/>
+							<p>I am a passionate developer with a keen interest in the front-end development. I am studying electronic engineering. I like to investigate and learn latest technologies.
+							<br/>
+							<br/>
+							My interests are Front-end development, mobile development and Cloud development.
+							<br/>
+							<br/>
+							In addition to programming, I like football, I play as a goalkeeper. My favorite team is Atletico Madrid and the best goalkeeper I admire is Jan Oblak.
+						</div>
+					</div>
+				</div>
+		</section>
+
+		<section class="section container-fluid" id="recognition">
+			<h2 class="centeredTitle" >Certificates</h2>
+			<div class="row wide-gutter">
+				<div class="col-sm-6" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
+					<ul>
+						<li><h6 class="award recognitionFourth" >HTML and CSS: Professional Course </h6></br>Azul School - 2019</li>
+						<li><h6 class="award recognitionFirst" >Responsive Web Design  </h6></br> FreeCodeCamp - 2020</li>
+						<li><h6 class="award recognitionSecond" >Bootstrap Course  </h6></br> Udemy - 2020</li>
+						<li><h6 class="award recognitionThird" >Javascript: Algorithms and Data Structure </h6></br>FreeCodeCamp - 2021</li>
+					</ul>
+				</div>
+				<div class="col-sm-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
+					<ul>
+						<li><h6 class="award recognitionSecond" >Front End Developer Course</h6></br> Platzi - 2021</li>
+						<li><h6 class="award recognitionThird" >Python Course</h6></br> Netacad - 2020</li>
+						<li><h6 class="award recognitionFourth" >Microsoft Office 365 Master Course</h6></br> Udemy - 2020</li>
+						<li><h6 class="award recognitionFirst" >Scrum Fundamentals</h6></br> ScrumStudy - 2020 </li>
+					</ul>
+				</div>
+				<div class="row text-center">
+					<div class="col-12">
+						<a class="btn btn-primary externalLinkButton" href="https://www.linkedin.com/in/luis-rebatta-lam/" target="_blank">More certificates</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+			<section class="section container-fluid p-0" id="community">
+				<div class="row">
+						<div class="col-lg-6 lg-vertical-center-container" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="275" data-aos-once="true" id="community-content">
+							<div>
+								<h2 class="centeredTitle">Personal Proyects</h2>
+								<p>
+									I did these projects with HTML, CSS and Javascript. If you want to see them, you can go to my GitHub.
+									I am trying to do more projects in order to improve my skills as a developer
+								</p>
+								<p>
+									My efforts focus on career development opportunities, mentorship, and industrial engagement.
+								</p>
+								<p>
+									Repository in my GitHub
+									<!--ul>
+										<li>Tellmeliu</li>
+									
+									</ul-->
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-6 p-0" id="communityImages">
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="row">
+										<div class="col-6">
+											<div class="photocontainer">
+												<img class="img-fluid"  src="images/community/3x2/javascriptform.png" alt="Page Project">
+												<div class="content">
+													<h6><b>FreeCodeCamp Challenge from Responsive Web Design Course</b></h6>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 communityPink"></div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="row">
+										<div class="col-6">
+											<div class="photocontainer">
+												<img class="img-fluid"  src="images/community/3x2/norman.png" alt="Project FreeCodeCamp">
+												<div class="content">
+													<h6><b>FreeCodeCamp Challenge from Responsive Web Design Course</b></h6>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 communityGreen"></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="row">
+										<div class="col-6 communityOrange"></div>
+										<div class="col-6">
+											<div class="photocontainer">
+												<img class="img-fluid" src="images/community/3x2/form.png" alt="Student to STEMettes graduation">
+												<div class="content">
+													<h6><b>Mentor in the Student to STEMettes mentorship program | 2019</b></h6>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="row">
+										<div class="col-6 communityBlue"></div>
+										<div class="col-6">
+											<div class="photocontainer">
+												<img class="img-fluid"  src="images/community/3x2/asini.png" alt="Microsoft mentee and I">
+												<div class="content">
+													<h6><b>Final Project of Login of the Front End Development course</b></h6>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="row">
+										<div class="col-6">
+											<div class="photocontainer">
+												<img class="img-fluid" src="images/community/3x2/trompeta.png" alt="Maqueteo">
+												<div class="content">
+													<h6><b>A Responsive Web Design</b></h6>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 communityGreen"></div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="row">
+										<div class="col-6">
+											<div class="photocontainer">
+												<img class="img-fluid"  src="images/community/3x2/netflix.png" alt="Netflix Web page">
+												<div class="content">
+													<h6><b>Build a Netflix Web Page</b></h6>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 communityPink"></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="row">
+										<div class="col-6 communityPink"></div>
+										<div class="col-6">
+											<div class="photocontainer">
+												<img class="img-fluid"  src="images/community/3x2/est1.png" alt="Estadistica">
+												<div class="content">
+													<h6><b>Manipulation of APIs</b></h6>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="row">
+										<div class="col-6 communityOrange"></div>
+										<div class="col-6">
+											<div class="photocontainer">
+												<img class="img-fluid"  src="images/community/3x2/est2.png" alt="Highest Grossing Movies">
+												<div class="content">
+													<h6><b>Manipulation of APIs : Highest Grossing Movies</b></h6>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="row">
+										<div class="col-6">
+											<div class="photocontainer">
+												<img class="img-fluid"  src="images/community/3x2/est3.png" alt="UNITED STATES ADULT EDUCATION">
+												<div class="content">
+													<h6><b>Manipulation of APIs : UNITED STATES ADULT EDUCATION</b></h6>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 communityBlue"></div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="row">
+										<div class="col-6">
+											<div class="photocontainer">
+												<img class="img-fluid"  src="images/community/3x2/est4.png" alt="MONTHLY GLOBAL LAND-SURFACE TEMPERATURE">
+												<div class="content">
+													<h6><b>Manipulation of APIs : MONTHLY GLOBAL LAND-SURFACE TEMPERATURE</b></h6>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 communityGreen"></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="row">
+										<div class="col-6 communityGreen"></div>
+										<div class="col-6">
+											<div class="photocontainer">
+												<img class="img-fluid"  src="images/community/3x2/est5.png" alt="DOPING IN PROFESSIONAL BICYCLE RACING">
+												<div class="content">
+													<h6><b>Manipulation of APIs : DOPING IN PROFESSIONAL BICYCLE RACING</b></h6>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="row">
+										<div class="col-6 communityPink"></div>
+										<div class="col-6">
+											<div class="photocontainer">
+												<img class="img-fluid"  src="images/community/3x2/ars1.png" alt="Login">
+												<div class="content">
+													<h6><b>Project: Login with requirements</b></h6>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+			</section>
+
+		
+
+		<section class="section container-fluid" id="connect">
+			<div data-aos="fade-down" data-aos-duration="1000" data-aos-delay="175" data-aos-once="true">
+				<h2 class="centeredTitle" >Reach Out!</h2>
+				<p>I am always looking to meet and talk to new likeminded people.
+				If you think we can work together or just want to talk, please get in touch!</p>
+				<a href="mailto:lrebattalam@gmail.com" class="fa fa-envelope" target="_blank"></a>
+				<a href="https://www.linkedin.com/in/luis-rebatta-lam/" class="fa fa-linkedin" target="_blank"></a>
+				<a href="https://www.instagram.com/tellmelee__/" class="fa fa-instagram" target="_blank"></a>
+				<p id="subtext">Find out more:</p>
+				<a href="documents/CV- Rebatta .pdf" class="fa fa fa-file-text-o" target="_blank"></a>
+				<a href="https://twitter.com/RebattaLam" class="fa fa-twitter" target="_blank"></a>
+				<a href="https://github.com/Tellmeliu" class="fa fa-github" target="_blank"></a>
+			</div>
+		</section>
+
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	  <script>
+	    AOS.init();
+	  </script>
+	</body>
+</html>
